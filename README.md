@@ -17,3 +17,19 @@ Download and install using:
 
     git clone https://github.com/krrish-v/python-rsa
 
+You will provide the keys something like-
+       
+        import rsa
+        
+        public, private = rsa.newkeys(2048)
+        public_key = (public.n, public.e)
+        private_key = (private.n, private.e, private.d, private.p, private.q)
+        
+        # encryption
+        rsa.encrypt(b'message', public_key)
+        #decryption
+        rsa.decrypt(<encrypted_text>, private_key)
+        
+And now why it is?
+
+-It is gonna make to collect the all the variables (n, e, d, p, q) if seperately also, so you can arrange them in a tuple and get it upload inside the function, it make easy to store the keys inside a file in int() format and the use it afterwards.
