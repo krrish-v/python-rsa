@@ -17,7 +17,7 @@ Download and install using:
 
     git clone https://github.com/krrish-v/python-rsa
 
-You will provide the keys something like-
+You will use it something like-
        
         import rsa
         
